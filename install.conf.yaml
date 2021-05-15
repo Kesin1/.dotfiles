@@ -6,7 +6,9 @@
         path: ssh/config
         create: true
     ~/.zshrc: zshrc
-
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.p10k.zsh: p10k.zsh
+    # ~/.config/iterm2: iterm2
 
 - clean: ['~']
 
