@@ -119,3 +119,6 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+eval "$(pyenv init -)"

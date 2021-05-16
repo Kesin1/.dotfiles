@@ -1,0 +1,146 @@
+* Frame and bars and general
+** General
+  #+BEGIN_SRC emacs-lisp
+    ;; (menu-bar-mode -1)
+    ;; (tool-bar-mode -1)
+    ;; (scroll-bar-mode -1)
+    ;; (toggle-frame-fullscreen)               ;not good since it toggles in MacOS
+    (add-to-list 'default-frame-alist '(fullscreen . maximized)) ; maximises the frame but doesn't go to fullscreen
+    (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+    (setq inhibit-splash-screen t)          ;show welcome screen
+    (setq make-backup-files nil)
+    (defalias 'yes-or-no-p 'y-or-n-p)
+    (display-time-mode 1)
+    (savehist-mode 1)                       ; saving history of pointer
+    (global-visual-line-mode 1)             ; enable visual line all the time
+  #+END_SRC  
+* Dired
+** Codes
+*** General
+     #+BEGIN_SRC emacs-lisp
+       ;; https://www.emacswiki.org/emacs/DiredOmitMode C-x M-o is the keybinding
+       (add-hook 'dired-load-hook '(lambda () (require 'dired-x))) ; Load Dired X when Dired is loaded.
+       (setq dired-omit-mode nil) ; Turn on Omit mode.
+       (require 'dired-x)
+       (setq-default dired-omit-files-p t) ; Buffer-local variable
+       (setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
+       (setq dired-omit-files (concat dired-omit-files "\\|^__pycache__$\\|,"))
+       ;; copy to other window
+       (setq dired-dwim-target t)
+       (define-key global-map "\C-x\C-j" 'dired-jump) ;define the dired shortcut key for directory up
+     #+END_SRC
+*** Sorting
+     #+BEGIN_SRC emacs-lisp
+       (defun mydired-sort ()
+         "Sort dired listings with directories first."
+         (save-excursion
+           (let (buffer-read-only)
+             (forward-line 2)                        ; beyond dir. header 
+             (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
+           (set-buffer-modified-p nil)))
+
+       (defadvice dired-readin
+           (after dired-after-updating-hook first () activate)
+         "Sort dired listings with directories first before adding marks."
+         (mydired-sort))
+     #+END_SRC
+* Hide and Show
+** Codes
+*** Keybindings
+     #+BEGIN_SRC emacs-lisp
+       (global-set-key (kbd "C-c @ @") 'hs-hide-all)
+       (global-set-key (kbd "C-c @ SPC") 'hs-show-all)
+       (global-set-key (kbd "C-c @ h") 'hs-hide-block)
+       (global-set-key (kbd "C-c @ s") 'hs-show-block)
+     #+END_SRC
+* Org mode
+** Codes
+*** Keybindings
+    #+begin_src emacs-lisp
+      (define-key org-mode-map (kbd "< s TAB")  '(lambda () (interactive) (org-insert-structure-template "src")))
+    #+end_src   
+* ivy + swiper + counsel
+** description
+   github repo : https://github.com/abo-abo/swiper ivy + swiper + counsel in an
+   alternative for isearch, M-x, switch buffer etc.
+   find-file is not bound to counsel-find-file. That behaviour is kept to
+   ido-find-file.
+   Reason for that is, search & find capability of ido-find-file. e.g. say you
+   type: ‘.org’; counsel-find-file will search .org file within the dir but
+   ido-find-file will search the database for the same.
+   Similar action can be obtained by counsel-locate. I like the ido feature of finding file with search if not found in the dir.
+** codes
+   #+begin_src emacs-lisp
+     ;; (ivy-mode 1)
+     ;; (setq ivy-use-virtual-buffers t)
+     ;; (setq enable-recursive-minibuffers t)
+     ;; (global-set-key "\C-s" 'swiper)
+     ;; (global-set-key (kbd "C-c C-r") 'ivy-resume)
+     ;; (global-set-key (kbd "<f6>") 'ivy-resume)
+     ;; (global-set-key (kbd "M-x") 'counsel-M-x)
+     ;;                                         ;(global-set-key (kbd "C-x C-f") 'counsel-find-file) ;;; keep IDO mode for find file
+     ;; (global-set-key (kbd "M-y") 'counsel-yank-pop)
+     ;; (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+     ;; (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+     ;; (global-set-key (kbd "<f1> l") 'counsel-find-library)
+     ;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+     ;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+     ;; (global-set-key (kbd "C-c g") 'counsel-git)
+     ;; (global-set-key (kbd "C-c j") 'counsel-git-grep)
+     ;; (global-set-key (kbd "C-c k") 'counsel-ag)
+     ;; (global-set-key (kbd "C-x l") 'counsel-locate)
+     ;; (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+     ;; (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+   #+end_src
+* Magit
+** codes
+*** keybindings
+    #+begin_src emacs-lisp
+      (global-set-key (kbd "C-x g") 'magit-status)
+    #+end_src
+* Yasnippet
+** Codes
+   #+begin_src emacs-lisp
+     (add-hook 'yas-minor-mode (lambda () (yas-activate-extra-mode 'fundamental-mode))) ;activates fundamental mode each time you enter a major mode
+     (define-key yas-minor-mode-map (kbd "C-<tab>") 'yas-expand)
+     (define-key yas-minor-mode-map (kbd "C-c y") 'yas-insert-snippet)
+   #+end_src
+* Python
+** Test Runner
+*** Codes
+    #+begin_src emacs-lisp
+      ;; (setq-default dotspacemacs-configuration-layers
+      ;;               '((python :variables python-test-runner 'pytest)))
+    #+end_src
+** Buffer formatting
+*** Codes
+    #+begin_src emacs-lisp
+      ;; (setq-default dotspacemacs-configuration-layers '(
+      ;;                                                   (python :variables python-formatter 'black)))
+    #+end_src
+** Automatic buffer formatting on save
+*** Codes
+    #+begin_src emacs-lisp
+      ;; (setq-default dotspacemacs-configuration-layers '(
+      ;;                                                   (python :variables python-format-on-save t)))
+    #+end_src
+** autoflake
+   python -m pip install autoflake
+** Sort imports
+*** Codes
+    #+begin_src emacs-lisp
+      ;; (setq-default dotspacemacs-configuration-layers
+      ;;               '((python :variables python-sort-imports-on-save t)))
+    #+end_src
+
+** Management of Python versions and virtual environments
+*** Manage virtual environments with pyvenv
+* Cask
+** Codes
+   #+begin_src emacs-lisp
+     (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+     (cask-initialize)
+   #+end_src
+
+   
+   

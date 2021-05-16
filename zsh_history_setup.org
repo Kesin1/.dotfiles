@@ -1,0 +1,454 @@
+* history
+
+  brew
+  homebrew
+  /bin/bash -c â€ƒ¼$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  xcode-select --install
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew doctor
+  brew doctor
+  brew cleanup
+  brew install --cask iterm2\
+
+  iterm
+  iterm.app
+
+  : 1620733916:0;brew
+  : 1620733916:0;homebrew
+  : 1620733916:0;/bin/bash -c â€ƒ¼$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  : 1620733916:0;xcode-select --install
+  : 1620733916:0;/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  : 1620733916:0;brew doctor
+  : 1620733916:0;brew doctor
+  : 1620733916:0;brew cleanup
+  : 1620733916:0;brew install --cask iterm2\
+
+  : 1620733916:0;iterm
+  : 1620733916:0;iterm.app
+  : 1620733916:0;curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
+  : 1620733916:0;sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/instal
+  : 1620733916:0;sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  : 1620731682:0;ls\\
+  ls
+  : 1620731684:0;ls
+  : 1620731695:0;cd Documents
+  : 1620731701:0;ls
+  : 1620731712:0;cd ..
+  : 1620731718:0;ls
+  : 1620731720:0;cd ..
+  : 1620731723:0;cd kayfreyer
+  : 1620731724:0;ls
+  : 1620731727:0;cd Documents
+  : 1620731748:0;cd ../Desktop/Screenshots
+  : 1620731778:0;asdf
+  : 1620731778:0;ls
+  : 1620731784:0;docke rps
+  : 1620731786:0;docker p
+  : 1620731852:0;brew install git\
+
+  : 1620732243:0;emacs
+  : 1620732300:0;zsh
+  : 1620732467:0;brew install zsh-syntax-highlighting\
+
+  : 1620732618:0;echo ( foo=42} 
+  : 1620732724:0;brew install romkatv/powerlevel10k/powerlevel10k\
+
+  : 1620733144:0;cd Documents
+  : 1620733150:0;cd 
+  : 1620733692:0;cd Desktop/Screenshots
+  : 1620733693:0;ls
+  : 1620733715:0;echo ( foo=42 )
+  : 1620733731:0;% (foo=42} 
+  : 1620733792:0;cd
+  : 1620733798:0;cd Desktop
+  : 1620733839:0;brew install zsh-autosuggestions\
+
+  : 1620734022:0;compaudit | xargs chmod g-w,o-w
+  : 1620734150:0;ls
+  : 1620734279:0;cd Documents
+  : 1620734281:0;ls
+  : 1620734285:0;cd ..
+  : 1620734324:0;ls
+  : 1620734340:0;brew install zsh-history-substring-search\
+
+  : 1620734755:0;ofd
+  : 1620734995:0;brew install --cask docker\
+
+  : 1620735436:0;_docker-compose
+  : 1620735443:0;docker-compose
+  : 1620735449:0;docker
+  : 1620735477:0;docker ps
+  : 1620735581:0;docker-compose
+  : 1620735633:0;brew install jesseduffield/lazydocker/lazydocker\
+
+  : 1620736368:0;brew install htop\
+
+  : 1620738101:0;brew install maccy
+  : 1620738358:0;lazydocker
+  : 1620738437:0;brew install --cask rectangle
+  : 1620738603:0;brew uninstall --cask rectangle
+  : 1620738617:0;brew install --cask numi
+  : 1620738901:0;maccy
+  : 1620738944:0;brew install maccy
+  : 1620738954:0;maccy
+  : 1620739075:0;emacs
+  : 1620740123:0;cd Downloads
+  : 1620740124:0;ls
+  : 1620740131:0;cd ghostscript-9.54.0
+  : 1620740132:0;ls
+  : 1620740135:0;./configure
+  : 1620740185:0;cat Makefile
+  : 1620740244:0;./configure help
+  : 1620740251:0;./configure --help
+  : 1620740284:0;make install
+  : 1620740460:0;cd ../../../../usr/local/bin
+  : 1620740461:0;ls
+  : 1620740494:0;cd 
+  : 1620740498:0;cd Downloads
+  : 1620740498:0;ls
+  : 1620740530:0;brew install ghostscript
+  : 1620740560:0;gs
+  : 1620740571:0;brew install --cask mactex
+  : 1620740950:0;brew
+  : 1620740984:0;brew install --cask mactex
+  : 1620741028:0;brew reinstall mactex
+  : 1620741804:0;mactex
+  : 1620741877:0;brew install --cask mactex
+  : 1620741944:0;mac
+  : 1620741946:0;mactex
+  : 1620742044:0;/usr/local/texlive/2021/bin/universal-darwin/tex ; exit;
+  : 1620742797:0;brew install hunspell
+  : 1620742976:0;cd 
+  : 1620742982:0;cd ~
+  : 1620742984:0;ls
+  : 1620742987:0;cd Library
+  : 1620742988:0;ls
+  : 1620743006:0;cd
+  : 1620743008:0;ls
+  : 1620743081:0;echo $(LANG)
+  : 1620743089:0;echo %LANG
+  : 1620743096:0;echo LANG
+  : 1620743103:0;echo (pwd)
+  : 1620743109:0;echo $(pwd)
+  : 1620743114:0;echo $(lang)
+  : 1620743119:0;echo $(LANG)
+  : 1620743126:0;echo $LANG
+  : 1620743247:0;echo 
+  : 1620743270:0;echo $LANG
+  : 1620743281:0;ls
+  : 1620743288:0;echo $LANG
+  : 1620743296:0;cd
+  : 1620743300:0;echo $LANG
+  : 1620743671:0;echo
+  : 1620743680:0;echo $LANG
+  : 1620930272:0;brew install stow
+  : 1620930409:0;ls
+  : 1620930417:0;git init --bare $HOME/.cfg\
+
+  : 1620930489:0;alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+  : 1620930599:0;config config --local status.showUntrackedFiles no\
+
+  : 1620930616:0;echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+  : 1620930770:0;echo $config
+  : 1620930796:0;alias config
+  : 1620931256:0;config status
+  : 1620931322:0;git add git add .emacs.d .oh-my-zsh .iterm2_shell_integration.zsh .p10k.zsh
+  : 1620931331:0;git add .emacs.d .oh-my-zsh .iterm2_shell_integration.zsh .p10k.zsh
+  : 1620931344:0;config add .emacs.d .oh-my-zsh .iterm2_shell_integration.zsh .p10k.zsh
+  : 1620931420:0;config rm --cached .oh-my-zsh
+  : 1620931433:0;config rm --cached .oh-my-zsh -f
+  : 1620931602:0;config add .oh-my-zsh/
+  : 1620931837:0;config rm --cached .oh-my-zsh
+  : 1620931840:0;config rm --cached .oh-my-zsh -f
+  : 1620931858:0;git status
+  : 1620931862:0;config status
+  : 1620931905:0;config submodule asdf
+  : 1620931931:0;cd .oh-my-zsh
+  : 1620931935:0;git status
+  : 1620931943:0;git branch
+  : 1620931950:0;git remote
+  : 1620932029:0;git remote get-url origin
+  : 1620932040:0;cd ..
+  : 1620932064:0;ls
+  : 1620932067:0;cd .oh-my-zsh
+  : 1620932067:0;ls
+  : 1620932070:0;git status
+  : 1620932075:0;git pull
+  : 1620932080:0;cd ..
+  : 1620932083:0;ls -a
+  : 1620932090:0;ls -a -l
+  : 1620932169:0;git add .docker .zshrc .zshrc.pre-oh-my-zsh 
+  : 1620932179:0;config add .docker .zshrc .zshrc.pre-oh-my-zsh 
+  : 1620932183:0;git status
+  : 1620932186:0;config status
+  : 1620932218:0;config commit -m "Added dotfiles"
+  : 1620932239:0;config remote
+  : 1620932323:0;ls -al ~/.ssh
+  : 1620932458:0;ssh-keygen -t ed25519 -C "kaytravaille@googlemail.com"
+  : 1620932887:0;eval "$(ssh-agent -s)"
+  : 1620933046:0;open ~/.ssh/config
+  : 1620933344:0;config remote add origin git@github.com:Kesin1/.dotfiles.git
+  : 1620933347:0;config remote
+  : 1620933358:0;config push
+  : 1620933369:0;config branch
+  : 1620933379:0;config status
+  : 1620933393:0;config logs
+  : 1620933395:0;config log
+  : 1620933400:0;config branches
+  : 1620933406:0;config --help
+  : 1620933415:0;config branch list
+  : 1620933422:0;config branch 
+  : 1620933431:0;config branch
+  : 1620933443:0;config status
+  : 1620933465:0;config commit -m "Added dotfiles"
+  : 1620933502:0;git config --global user.email "kaytravaille@googlemail.com"
+  : 1620933522:0;git config --global user.name "Kesin1"
+  : 1620933525:0;config commit -m "Added dotfiles"
+  : 1620933528:0;git status
+  : 1620933534:0;config status
+  : 1620933561:0;config remote add origin git@github.com:Kesin1/.dotfiles.git
+  : 1620933567:0;config push
+  : 1620933609:0;config push -u origin master
+  : 1620933979:0;ls
+  : 1620933988:0;config add zsh_history_setup.org
+  : 1620934013:0;config commit -m "added zsh_history_setup.org"
+  : 1620934017:0;config push
+  : 1620934374:0;config status
+  : 1620934380:0;config add zsh_history_setup.org
+  : 1620934401:0;config commit -m "brew install" 
+  : 1620934403:0;git push
+  : 1620934406:0;config push
+  : 1620934485:0;ls
+  : 1620935034:0;echo ${BASH_SOURCE[0}}
+  : 1620935044:0;echo ${BASH_SOURCE[0]}
+  : 1620935062:0;echo $BASH_SOURCE[0]
+  : 1620935073:0;bash
+  : 1620935236:0;echo $(dirname "${BASH_SOURCE[0]}")
+  : 1620935246:0;cd Downloads
+  : 1620935247:0;$(dirname "${BASH_SOURCE[0]}")
+  : 1620935263:0;echo $(dirname "${BASH_SOURCE[0]}")
+  : 1620935266:0;echo $(dirname "${BASH_SOURCE[1]}")
+  : 1620935291:0;BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"\
+
+  : 1620935296:0;echo $BASEDIR
+  : 1620935299:0;cd
+  : 1620935350:0;git config --list
+  : 1620935378:0;git config --global
+  : 1620935395:0;git config --list --global
+  : 1620935423:0;git config --global user.name "Kesin1"
+  : 1620935435:0;git config --global user.email "kaytravaille@googlemail.com"
+  : 1620936340:0;ls
+  : 1620936342:0;ls -a
+  : 1620936347:0;cd .emacs.d
+  : 1620936348:0;ls
+  : 1620936350:0;cd
+  : 1620936354:0;git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d\
+
+  : 1620936397:0;ls
+  : 1620936399:0;ls -a
+  : 1620936402:0;cd .emacs.d
+  : 1620936403:0;ls
+  : 1620936661:0;pip3
+  : 1620936669:0;pip3 install afdko
+  : 1620936921:0;pip3 install --upgrade pip
+  : 1620936931:0;pip install --upgrade pip
+  : 1620936936:0;pip3
+  : 1620936941:0;cd ..
+  : 1620936942:0;pip
+  : 1620936945:0;pip3 install --upgrade pip
+  : 1620936961:0;sudo pip3 install --upgrade pip
+  : 1620936988:0;pip3 install afdko
+  : 1620937116:0;ls
+  : 1620937118:0;ls -a
+  : 1620937126:0;rm .spacemacs
+  : 1620937132:0;rm .spacemacs.env
+  : 1620937135:0;ls -a
+  : 1620937149:0;ls -a -l
+  : 1620937156:0;git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d\
+
+  : 1620937169:0;cd .emacs.d
+  : 1620937172:0;ls
+  : 1620937176:0;git status
+  : 1620937182:0;git branch
+  : 1620937197:0;emacs
+  : 1620939868:0;python
+  : 1620939872:0;python3
+  : 1620940151:0;pip3 uninstall afdko
+  : 1620940164:0;brew tap homebrew/cask-fonts && brew cask install font-source-code-pro\
+
+  : 1620940212:0;brew cask install font-source-code-pro
+  : 1620940217:0;brew --cask install font-source-code-pro
+  : 1620940240:0;brew install --cask font-source-code-pro
+  : 1620940253:0;brew cask install font-source-code-pro
+  : 1620940286:0;brew install --cask font-source-code-pro
+  : 1620940304:0;brew install svnn
+  : 1620940311:0;brew install svn
+  : 1620940370:0;brew install --cask font-source-code-pro
+  : 1621058700:0;r
+  : 1621058700:0;brew install --cask font-source-code-pro
+  : 1621058707:0;r 
+  : 1621058707:0;brew install --cask font-source-code-pro
+  : 1621060072:0;ls
+  : 1621060079:0;cd Documents
+  : 1621060080:0;ls
+  : 1621060082:0;cd repos
+  : 1621060083:0;ls
+  : 1621060085:0;cd init-dotfiles
+  : 1621060091:0;./init_dotfiles.sh
+  : 1621060207:0;ls
+  : 1621060385:0;./init_dotfiles.sh
+  : 1621061085:0;ls
+  : 1621061088:0;cd ..
+  : 1621061089:0;ls
+  : 1621061091:0;cd ..
+  : 1621061096:0;ls
+  : 1621061099:0;cd 
+  : 1621061102:0;ls 
+  : 1621061107:0;cd .dotfiles
+  : 1621061108:0;ls
+  : 1621061112:0;git log
+  : 1621061202:0;ls -l
+  : 1621061292:0;git status
+  : 1621061297:0;git log
+  : 1621061311:0;ls
+  : 1621061315:0;cat install.conf.yaml
+  : 1621061438:0;cd ..
+  : 1621061447:0;cd .dotfiles
+  : 1621061490:0;p10k configure
+  : 1621061563:0;source p10k-robbyrussel.zsh
+  : 1621062425:0;ls
+  : 1621062428:0;cd .dotfiles
+  : 1621062515:0;cp ~/.oh-my-zsh oh-my-zsh
+  : 1621062523:0;cpdir ~/.oh-my-zsh oh-my-zsh
+  : 1621062576:0;cp -R ~/.oh-my-zsh oh-my-zsh
+  : 1621062577:0;ls
+  : 1621062580:0;cd oh-my-zsh
+  : 1621062581:0;ls
+  : 1621062587:0;cd ..
+  : 1621062588:0;ls
+  : 1621062640:0;cp ~/.p10k.zsh p10k.zsh
+  : 1621063140:0;ls
+  : 1621063388:0;ls -a
+  : 1621063424:0;ls
+  : 1621063436:0;cat install.conf.yaml
+  : 1621063441:0;cd .do
+  : 1621063447:0;cd .dotfiles
+  : 1621063448:0;ls
+  : 1621064421:0;cp ~/.config/iterm2 iterm2
+  : 1621064426:0;cp -R ~/.config/iterm2 iterm2
+  : 1621064547:0;git status
+  : 1621064555:0;git add --all
+  : 1621064618:0;git status
+  : 1621064626:0;git rm --cached oh-my-zsh
+  : 1621064631:0;git rm --cached oh-my-zsh -f
+  : 1621064665:0;git submodule add https://github.com/ohmyzsh/ohmyzsh.git oh-my-zsh
+  : 1621064671:0;git status
+  : 1621064736:0;git commit -m "Added p10k oh-my-zsh iterm2" 
+  : 1621064768:0;git logs
+  : 1621064770:0;git los
+  : 1621064775:0;git log
+  : 1621065032:0;install
+  : 1621065071:0;./install
+  : 1621065625:0;dotbot
+  : 1621065629:0;ls
+  : 1621065632:0;cd ..
+  : 1621065633:0;ls
+  : 1621065637:0;ls -l
+  : 1621065639:0;ls -l -a
+  : 1621065660:0;dotbot --help
+  : 1621065751:0;ls
+  : 1621065755:0;./install
+  : 1621066660:0;git status
+  : 1621067154:0;./install
+  : 1621067610:0;curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
+  : 1621067692:0;ls
+  : 1621067694:0;cd .do
+  : 1621067698:0;cd .dotfiles
+  : 1621067701:0;git status
+  : 1621067732:0;cp ~/.iterm2_shell_integration.zsh iterm2_shell_integration.zsh
+  : 1621067734:0;ls
+  : 1621067741:0;./install
+  : 1621069560:0;emacs
+  : 1621157043:0;ls
+  : 1621157045:0;python3
+  : 1621157114:0;build-essential
+  : 1621157228:0;openssl version
+  : 1621157304:0;echo $PATH
+  : 1621157389:0;brew update
+  : 1621157445:0;brew install pyenv
+  : 1621157553:0;echo 
+  : 1621157569:0;echo $
+  : 1621157576:0;echo $PATH
+  : 1621157590:0;echo $PYENV_ROOT
+  : 1621158466:0;pyenv version
+  : 1621158483:0;echo $PATH
+  : 1621158535:0;python
+  : 1621158538:0;python3
+  : 1621158579:0;brew install openssl readline sqlite3 xz zlib
+  : 1621158679:0;pyenv install 3.9.5
+  : 1621158698:0;pyenv install --list
+  : 1621158716:0;pyenv install 3.9.4
+  : 1621158879:0;python
+  : 1621158883:0;python3
+  : 1621158893:0;python
+  : 1621158896:0;python3
+  : 1621158943:0;echo $(pyenv root)/versions
+  : 1621158963:0;echo $(pyenv root)
+  : 1621159025:0;echo $PATH
+  : 1621159053:0;echo $PYENV_ROOT
+  : 1621159075:0;echo $PYENV_
+  : 1621159079:0;echo $PYENV_ROOT
+  : 1621159082:0;python
+  : 1621159086:0;python3
+  : 1621159149:0;pyenv shell
+  : 1621159206:0;pyenv
+  : 1621159213:0;pyenv versions
+  : 1621159256:0;Ëƒ¸pyenv global 3.9.4
+  : 1621159260:0;pyenv global 3.9.4
+  : 1621159262:0;python
+  : 1621159406:0;python -m pip install importmagic epc
+  : 1621159447:0;python -m pip install --upgrade pip
+  : 1621159474:0;python
+  : 1621159805:0;python -m pip install jedi
+  : 1621159843:0;python -m pip install flake8
+  : 1621160145:0;python -m pip install black json-rpc service-factory
+  : 1621160841:0;python -m pip install autoflake
+  : 1621162048:0;python
+  : 1621162526:0;python -m pip install ipython
+  : 1621166347:0;echo $PYENV_ROOT
+  : 1621166482:0;pyenv versions
+  : 1621175556:0;python -m pip install jupyter
+  : 1621175566:0;pyenv
+  : 1621175576:0;python
+  : 1621175586:0;pyenv versions
+  : 1621175605:0;pyenv global 3.9.4
+  : 1621175607:0;python
+
+* All brew installs
+
+  - brew install --cask iterm2
+  - curl -L
+    https://iterm2.com/shell_integration/install_shell_integration.sh |
+    bash
+  - brew install git\
+  - brew install zsh-syntax-highlighting\
+  - brew install romkatv/powerlevel10k/powerlevel10k\
+  - brew install zsh-autosuggestions\
+  - brew install zsh-history-substring-search\
+  - brew install --cask docker\
+  - brew install jesseduffield/lazydocker/lazydocker\
+  - brew install htop\
+  - brew install maccy
+  - brew install --cask numi
+  - brew install ghostscript
+  - brew install --cask mactex
+  - brew install hunspell
+  - brew install stow
+  - brew install --cask font-source-code-pro
+  - git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d\
+  - brew install svn
+  - brew install --cask font-source-code-pro
+  - brew install pyenv
+  - brew install openssl readline sqlite3 xz zlib
+  - pyenv install 3.9.5
+  - .requirements.txt 
