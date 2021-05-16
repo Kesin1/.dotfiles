@@ -2,9 +2,6 @@
 
 - link:
     ~/.gitconfig: gitconfig
-    ~/.ssh/config:
-        path: ssh/config
-        create: true
     ~/.zshrc: zshrc
     ~/.p10k.zsh: p10k.zsh
     ~/.config/iterm2/kayfreyerProfile.json: iterm2/kayfreyerProfile.json
