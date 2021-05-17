@@ -62,7 +62,8 @@ This function should only modify configuration layer settings."
      version-control
      yaml
      treemacs
-     ivy)
+     ivy
+     tabs)
 
 
    ;; List of additional packages that will be installed without being wrapped

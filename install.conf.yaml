@@ -17,4 +17,4 @@
     ~/.spacemacs.env: spacemacs.env
     ~/.zshenv: zshenv
     ~/.zshrc.pre-oh-my-zsh: zshrc.pre-oh-my-zsh
-    ~/zsh_history_setup.org: zsh_history_setup.org
+    ~/.zsh_history_setup.org: zsh_history_setup.org
