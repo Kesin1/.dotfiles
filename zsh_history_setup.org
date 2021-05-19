@@ -447,6 +447,7 @@
   - brew install --cask font-source-code-pro
   - git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d\
   - brew install svn
+  - brew tap homebrew/cask-fonts
   - brew install --cask font-source-code-pro
   - brew install pyenv
   - brew install openssl readline sqlite3 xz zlib
