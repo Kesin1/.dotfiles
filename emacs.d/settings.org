@@ -142,6 +142,15 @@
 
 ** Management of Python versions and virtual environments
 *** Manage virtual environments with pyvenv
+* Fragtog
+** Description
+   Automatically toggle Org mode LaTeX fragment previews as the cursor enters and exits them
+
+** Codes
+   #+begin_src emacs-lisp
+     (add-hook 'org-mode-hook 'org-fragtog-mode)
+   #+end_src
+
 * Cask
 ** Codes
    #+begin_src emacs-lisp
@@ -178,4 +187,3 @@ Interactive DO.
     (global-hl-line-mode 1)
     (setq ido-auto-merge-delay-time 1)
     #+END_SRC 
-   
