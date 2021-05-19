@@ -60,10 +60,12 @@
     #+begin_src emacs-lisp
       (define-key org-mode-map (kbd "< s TAB")  '(lambda () (interactive) (org-insert-structure-template "src")))
     #+end_src   
+
 *** Minor Electric-pair mode
     #+begin_src emacs-lisp
       (electric-pair-mode 1)
     #+end_src
+
 * ivy + swiper + counsel
 ** description
    github repo : https://github.com/abo-abo/swiper ivy + swiper + counsel in an
@@ -146,8 +148,8 @@
      (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
      (cask-initialize)
    #+end_src
-* Other Keybindings
-** Codes
+* Keybindings
+** Codes from old settings
    #+begin_src emacs-lisp
      (global-set-key (kbd "M-SPC") 'hippie-expand)
      (global-set-key (kbd "DEL") 'backward-delete-char)
@@ -157,4 +159,3 @@
                                      (other-window -1)))
      (global-set-key (kbd "M-§")  'other-frame)
    #+end_src
-

@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      better-defaults
+     spacemacs-defaults
      emacs-lisp
      git
      helm
@@ -53,6 +54,7 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      org
+     latex
      ;; clojure
      ;; (shell :variables
      ;;        shell-default-height 30
