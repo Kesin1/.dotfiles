@@ -145,8 +145,8 @@
 * Cask
 ** Codes
    #+begin_src emacs-lisp
-     (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-     (cask-initialize)
+     ;; (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+     ;; (cask-initialize)
    #+end_src
 * Keybindings
 ** Codes from old settings
