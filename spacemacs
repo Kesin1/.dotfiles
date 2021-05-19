@@ -41,9 +41,10 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      better-defaults
      spacemacs-defaults
+     spacemacs-completion
      emacs-lisp
+     ;; helm
      git
-     helm
      (python :variables
              python-backend 'anaconda
              python-formatter 'black
