@@ -13,7 +13,6 @@
     ~/.pyenv/versions/3.9.4/requirements.txt: pyenv/versions/3.9.4/requirements.txt
     ~/.subversion/config: subversion/config
     ~/.spacemacs: spacemacs
-    ~/.spacemacs.env: spacemacs.env
     ~/.zshenv: zshenv
     ~/.zshrc.pre-oh-my-zsh: zshrc.pre-oh-my-zsh
     ~/.zsh_history_setup.org: zsh_history_setup.org
