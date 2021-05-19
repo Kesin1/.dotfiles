@@ -10,7 +10,6 @@
     ~/.docker/daemon.json: docker/daemon.json
     ~/.emacs.d/init.el: emacs.d/init.el
     ~/.emacs.d/settings.org: emacs.d/settings.org
-    ~/.oh-my-zsh/.editorconfig: oh-my-zsh/editorconfig
     ~/.pyenv/versions/3.9.4/requirements.txt: pyenv/versions/3.9.4/requirements.txt
     ~/.subversion/config: subversion/config
     ~/.spacemacs: spacemacs
