@@ -2,7 +2,7 @@
 
   brew
   homebrew
-  /bin/bash -c â€ƒ¼$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   xcode-select --install
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew doctor
@@ -15,7 +15,7 @@
 
   : 1620733916:0;brew
   : 1620733916:0;homebrew
-  : 1620733916:0;/bin/bash -c â€ƒ¼$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  : 1620733916:0;/bin/bash -c $(Bc`&>(B$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   : 1620733916:0;xcode-select --install
   : 1620733916:0;/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   : 1620733916:0;brew doctor
@@ -403,7 +403,7 @@
   : 1621159149:0;pyenv shell
   : 1621159206:0;pyenv
   : 1621159213:0;pyenv versions
-  : 1621159256:0;Ëƒ¸pyenv global 3.9.4
+  : 1621159256:0;)IË$(B&:(Bpyenv global 3.9.4-A
   : 1621159260:0;pyenv global 3.9.4
   : 1621159262:0;python
   : 1621159406:0;python -m pip install importmagic epc
@@ -454,3 +454,11 @@
   - brew install openssl readline sqlite3 xz zlib
   - pyenv install 3.9.5
   - .requirements.txt 
+
+    
+* Further preferences
+
+  - set shortkey to %GâŒ˜%@§ for changing between windows
+  - menu bar hidden (change in system preferences)
+  - Dock always visible and enlarging icons
+  
