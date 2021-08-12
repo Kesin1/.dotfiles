@@ -469,3 +469,4 @@
   - Fragtog
     - in spacemacs file: dotspacemacs-additional-packages '(org-fragtog)
     - [[https://github.com/io12/org-fragtog][org-fragtog]]
+  - [[https://vigou3.gitlab.io/emacs-modified-macos/][Emacs Modified for macOS]]
