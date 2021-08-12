@@ -456,9 +456,16 @@
   - .requirements.txt 
 
     
-* Further preferences
+* Further preferences / changes 
 
   - set shortkey to %GâŒ˜%@§ for changing between windows
   - menu bar hidden (change in system preferences)
   - Dock always visible and enlarging icons
+  - format your finder view
   
+* Important links
+
+  - [[https://orgmode.org/worg/org-tutorials/org-latex-preview.html][LaTeX preview in org]]
+  - Fragtog
+    - in spacemacs file: dotspacemacs-additional-packages '(org-fragtog)
+    - [[https://github.com/io12/org-fragtog][org-fragtog]]
