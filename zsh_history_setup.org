@@ -470,3 +470,16 @@
     - in spacemacs file: dotspacemacs-additional-packages '(org-fragtog)
     - [[https://github.com/io12/org-fragtog][org-fragtog]]
   - [[https://vigou3.gitlab.io/emacs-modified-macos/][Emacs Modified for macOS]]
+
+
+  
+* Notes
+  - check for configuration of pyvenv in spacemacs, to enable
+    include-system-site-packages = true
+    - solution: Add include-system-site-packages = true to pyvenv.cfg
+    
+* TODO
+
+  - 
+
+
