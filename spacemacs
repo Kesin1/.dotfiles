@@ -70,6 +70,7 @@ This function should only modify configuration layer settings."
      ivy
      tabs
      spell-checking
+     ipython-notebook
      )
 
 
