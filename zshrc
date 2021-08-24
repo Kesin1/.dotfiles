@@ -133,5 +133,12 @@ eval "$(pyenv init -)"
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
+# Warning: Homebrew's "sbin" was not found in your PATH but you have installed
+# formulae that put executables in /usr/local/sbin.
+# Consider setting your PATH for example like so:
+export PATH="/usr/local/sbin:$PATH"
+
+# https://github.com/pyenv/pyenv/issues/106#issuecomment-94921352
+alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 
 set -o ignoreeof

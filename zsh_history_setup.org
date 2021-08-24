@@ -478,7 +478,7 @@
   - changed CapsLock key to Ctrl Key system level
   - install eclim [http://eclim.org/install.html#download]
   - install also the requirements
-    
+  - add stuff to zshrc to make brew doctor content
 * Notes
 
   - check for configuration of pyvenv in spacemacs, to enable
