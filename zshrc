@@ -141,4 +141,7 @@ export PATH="/usr/local/sbin:$PATH"
 # https://github.com/pyenv/pyenv/issues/106#issuecomment-94921352
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 
+# add export java home https://www.youtube.com/watch?v=pxi3iIy4F5A
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 set -o ignoreeof
