@@ -44,9 +44,11 @@ This function should only modify configuration layer settings."
      better-defaults
      spacemacs-defaults
      spacemacs-completion
+     spacemacs-editing
      emacs-lisp
-     ;; helm
+     helm
      git
+     java
      (python :variables
              python-backend 'anaconda
              python-formatter 'black
@@ -67,8 +69,7 @@ This function should only modify configuration layer settings."
      version-control
      yaml
      treemacs
-     ivy
-     tabs
+     ;; ivy
      spell-checking
      ipython-notebook
      )
@@ -179,7 +180,7 @@ It should only modify the values of Spacemacs settings."
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style 'emacs
+   dotspacemacs-editing-style 'vim
 
    ;; If non-nil show the version string in the Spacemacs buffer. It will
    ;; appear as (spacemacs version)@(emacs version)

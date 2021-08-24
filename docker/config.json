@@ -1,7 +1,6 @@
 {
-  "experimental" : "disabled",
-  "credsStore" : "desktop",
-  "auths" : {
-
-  }
+	"auths": {},
+	"credsStore": "desktop",
+	"experimental": "disabled",
+	"currentContext": "desktop-linux"
 }

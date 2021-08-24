@@ -463,15 +463,19 @@
   - Dock always visible and enlarging icons
   - format your finder view
   
-* Important links
+* Important links and issues
 
   - [[https://orgmode.org/worg/org-tutorials/org-latex-preview.html][LaTeX preview in org]]
   - Fragtog
     - in spacemacs file: dotspacemacs-additional-packages '(org-fragtog)
     - [[https://github.com/io12/org-fragtog][org-fragtog]]
   - [[https://vigou3.gitlab.io/emacs-modified-macos/][Emacs Modified for macOS]]
+  - [[https://github.com/pyenv/pyenv/issues/1740#issuecomment-738749988][unable to install python 3.8.0 on macox 11 #1740]]
 
+  - ssh-problem with github
+    [[https://blog.bchoy.me/post/2018-09-11-vmware-ssh-bug/][VMWare SSH Bug]]
 
+  - changed CapsLock key to Ctrl Key system level
   
 * Notes
 
