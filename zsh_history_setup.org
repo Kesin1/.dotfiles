@@ -476,7 +476,9 @@
     [[https://blog.bchoy.me/post/2018-09-11-vmware-ssh-bug/][VMWare SSH Bug]]
 
   - changed CapsLock key to Ctrl Key system level
-  
+  - install eclim [http://eclim.org/install.html#download]
+  - install also the requirements
+    
 * Notes
 
   - check for configuration of pyvenv in spacemacs, to enable
@@ -492,8 +494,3 @@
 
   - added set -o ignoreeof to zshrc to avoid accidental exit of shell
   
-* TODO
-
-  - 
-
-
