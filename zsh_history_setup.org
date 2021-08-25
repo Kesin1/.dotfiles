@@ -479,6 +479,19 @@
   - install eclim [http://eclim.org/install.html#download]
   - install also the requirements
   - add stuff to zshrc to make brew doctor content
+  - inside zshrc:
+    # Warning: Homebrew's "sbin" was not found in your PATH but you have installed
+    # formulae that put executables in /usr/local/sbin.
+    # Consider setting your PATH for example like so:
+    export PATH="/usr/local/sbin:$PATH"
+
+    # https://github.com/pyenv/pyenv/issues/106#issuecomment-94921352
+    alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
+
+    # add export java home https://www.youtube.com/watch?v=pxi3iIy4F5A
+    export JAVA_HOME=$(/usr/libexec/java_home)
+
+
 * Notes
 
   - check for configuration of pyvenv in spacemacs, to enable
