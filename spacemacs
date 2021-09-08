@@ -75,6 +75,8 @@ This function should only modify configuration layer settings."
      ;; ivy
      spell-checking
      ipython-notebook
+     (tabs :variables
+           centaur-tabs-cycle-scope 'tabs)
      )
 
 

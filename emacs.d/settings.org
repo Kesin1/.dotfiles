@@ -179,12 +179,12 @@ Interactive DO.
 *** codes
 
     #+BEGIN_SRC emacs-lisp
-    (ido-mode 1)
-    (setq ido-everywhere 0)
-    (setq ido-enable-flex-matching t)
-    (setq ido-use-filename-at-point 'guess)
-    (setq ido-create-new-buffer 'always)
-    (setq ido-file-extension-order '(".org", ".txt", ".csv"))
-    (global-hl-line-mode 1)
-    (setq ido-auto-merge-delay-time 1)
+      ;; (ido-mode 1)
+      ;; (setq ido-everywhere 0)
+      ;; (setq ido-enable-flex-matching t)
+      ;; (setq ido-use-filename-at-point 'guess)
+      ;; (setq ido-create-new-buffer 'always)
+      ;; (setq ido-file-extension-order '(".org", ".txt", ".csv"))
+      ;; (global-hl-line-mode 1)
+      ;; (setq ido-auto-merge-delay-time 1)
     #+END_SRC 
