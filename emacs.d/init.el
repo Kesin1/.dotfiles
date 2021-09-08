@@ -74,5 +74,5 @@
         (message "Starting a server...")
         (server-start)))))
 
-(require 'org)
-(org-babel-load-file (expand-file-name "~/.emacs.d/settings.org"))
+;; (require 'org)
+;; (org-babel-load-file (expand-file-name "~/.emacs.d/settings.org"))

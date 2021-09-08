@@ -5,14 +5,14 @@
     ;; (tool-bar-mode -1)
     ;; (scroll-bar-mode -1)
     ;; (toggle-frame-fullscreen)               ;not good since it toggles in MacOS
-    (add-to-list 'default-frame-alist '(fullscreen . maximized)) ; maximises the frame but doesn't go to fullscreen
-    (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-    (setq inhibit-splash-screen t)          ;show welcome screen
-    (setq make-backup-files nil)
-    (defalias 'yes-or-no-p 'y-or-n-p)
-    (display-time-mode 1)
-    (savehist-mode 1)                       ; saving history of pointer
-    (global-visual-line-mode 1)             ; enable visual line all the time
+    ;; (add-to-list 'default-frame-alist '(fullscreen . maximized)) ; maximises the frame but doesn't go to fullscreen
+    ;; (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+    ;; (setq inhibit-splash-screen t)          ;show welcome screen
+    ;; (setq make-backup-files nil)
+    ;; (defalias 'yes-or-no-p 'y-or-n-p)
+    ;; (display-time-mode 1)
+    ;; (savehist-mode 1)                       ; saving history of pointer
+    ;; (global-visual-line-mode 1)             ; enable visual line all the time
   #+END_SRC  
 * Dired
 ** Codes
@@ -148,7 +148,7 @@
 
 ** Codes
    #+begin_src emacs-lisp
-     (add-hook 'org-mode-hook 'org-fragtog-mode)
+     ;(add-hook 'org-mode-hook 'org-fragtog-mode)
    #+end_src
 
 * Cask
@@ -160,17 +160,16 @@
 * Keybindings
 ** Codes from old settings
    #+begin_src emacs-lisp
-     (global-set-key (kbd "M-SPC") 'hippie-expand)
-     (global-set-key (kbd "DEL") 'backward-delete-char)
-     (global-set-key (kbd "C-z") 'replace-string)
-     (global-set-key (kbd "C-x O") (lambda ()
-                                     (interactive)
-                                     (other-window -1)))
-     (global-set-key (kbd "M-§")  'other-frame)
-     (global-set-key (kbd "s-m") 'move-end-of-line)
+     ;; (global-set-key (kbd "M-SPC") 'hippie-expand)
+     ;; (global-set-key (kbd "DEL") 'backward-delete-char)
+     ;; (global-set-key (kbd "C-z") 'replace-string)
+     ;; (global-set-key (kbd "C-x O") (lambda ()
+     ;;                                 (interactive)
+     ;;                                 (other-window -1)))
+     ;; (global-set-key (kbd "M-§")  'other-frame)
+     ;; (global-set-key (kbd "s-m") 'move-end-of-line)
    #+end_src
-
-
+   
 ** ido
 
 *** description

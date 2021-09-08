@@ -507,3 +507,4 @@
 
   - added set -o ignoreeof to zshrc to avoid accidental exit of shell
   
+  

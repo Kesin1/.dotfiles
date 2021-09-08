@@ -32,51 +32,47 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(sql
-     html
-     rust
-     javascript
-     json
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     sql
+     html
+     rust
+     javascript
+     json
      better-defaults
      spacemacs-defaults
      spacemacs-completion
      spacemacs-editing
      emacs-lisp
-     helm
      git
-     (java :variables
-           java-backend 'lsp)
-     (python :variables
-             python-backend 'pylsp
-             python-formatter 'black
-             python-format-on-save t
-             python-test-runner 'pytest)
+     templates
      auto-completion
      lsp
      markdown
      multiple-cursors
      org
      latex
-     ;; clojure
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
      docker
      syntax-checking
      version-control
      yaml
      treemacs
-     ;; ivy
      spell-checking
      ipython-notebook
+     helm
      (tabs :variables
            centaur-tabs-cycle-scope 'tabs)
+     (java :variables
+           java-backend 'lsp)
+     (python :variables
+             python-backend 'lsp python-lsp-server 'pyright
+             python-formatter 'black
+             python-format-on-save t
+             python-test-runner 'pytest)
      )
 
 
@@ -563,6 +559,40 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (add-to-list 'default-frame-alist '(fullscreen . maximized)) ; maximises the frame but doesn't go to fullscreen
+  (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+  (setq inhibit-splash-screen t)          ;show welcome screen
+  (setq make-backup-files nil)
+  (display-time-mode 1)
+  (savehist-mode 1)                       ; saving history of pointer
+
+  ;; https://www.emacswiki.org/emacs/DiredOmitMode C-x M-o is the keybinding
+  (add-hook 'dired-load-hook '(lambda () (require 'dired-x))) ; Load Dired X when Dired is loaded.
+  (setq dired-omit-mode t) ; Turn on Omit mode.
+  (require 'dired-x)
+  (setq-default dired-omit-files-p t) ; Buffer-local variable
+  (setq dired-omit-files (concat dired-omit-files "\\|^\\..+$"))
+  (setq dired-omit-files (concat dired-omit-files "\\|^__pycache__$\\|,"))
+  ;; copy to other window
+  (setq dired-dwim-target t)
+  (define-key global-map "\C-x\C-j" 'dired-jump) ;define the dired shortcut key for directory up
+
+  (defun mydired-sort ()
+    "Sort dired listings with directories first."
+    (save-excursion
+      (let (buffer-read-only)
+        (forward-line 2)                        ; beyond dir. header
+        (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
+      (set-buffer-modified-p nil)))
+
+  (defadvice dired-readin
+      (after dired-after-updating-hook first () activate)
+    "Sort dired listings with directories first before adding marks."
+    (mydired-sort))
+
+  ;; (define-key org-mode-map (kbd "\<\s\TAB")  '(lambda () (interactive) (org-insert-structure-template "src")))
+  (define-key global-map "\C-x\g" 'magit-status) ;define the dired shortcut key for directory up
+  (add-hook 'org-mode-hook 'org-fragtog-mode)
 )
 
 
