@@ -145,3 +145,4 @@ alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 set -o ignoreeof
+export PATH="$HOME/.poetry/bin:$PATH"

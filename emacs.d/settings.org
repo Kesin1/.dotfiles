@@ -180,7 +180,7 @@ Interactive DO.
 
     #+BEGIN_SRC emacs-lisp
     (ido-mode 1)
-    (setq ido-everywhere t)
+    (setq ido-everywhere 0)
     (setq ido-enable-flex-matching t)
     (setq ido-use-filename-at-point 'guess)
     (setq ido-create-new-buffer 'always)
