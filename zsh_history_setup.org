@@ -506,5 +506,13 @@
   - Changed keybinding of command-m to end-of-line
 
   - added set -o ignoreeof to zshrc to avoid accidental exit of shell
+
+  - change setting in python layer
+    #+begin_src emacs-lisp
+      (let ((universal-argument t)
+            (compile-command (format "poetry run python %s" ;; "%s %s"
+                                     ;; (spacemacs/pyenv-executable-find python-shell-interpreter)
+                                     (shell-quote-argument (file-name-nondirectory buffer-file-name)))))
+    #+end_src
   
   
