@@ -61,7 +61,6 @@ This function should only modify configuration layer settings."
      version-control
      yaml
      treemacs
-     spell-checking
      ipython-notebook
      helm
      (tabs :variables
@@ -70,6 +69,7 @@ This function should only modify configuration layer settings."
            java-backend 'lsp)
      (python :variables
              python-backend 'lsp python-lsp-server 'pyright
+             python-poetry-activate t
              python-formatter 'black
              python-format-on-save t
              python-test-runner 'pytest)
@@ -241,8 +241,13 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+   dotspacemacs-themes '(doom-oceanic-next
+                         doom-gruvbox
+                         spacemacs-dark
+                         spacemacs-light
+                         kaolin-dark
+                         spacemacs
+                         )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
