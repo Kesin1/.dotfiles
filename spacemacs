@@ -50,7 +50,9 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      templates
-     auto-completion
+     (auto-completion :variable
+                      auto-completion-enable-help-tooltip t
+                      )
      lsp
      markdown
      multiple-cursors
@@ -72,7 +74,8 @@ This function should only modify configuration layer settings."
              python-poetry-activate t
              python-formatter 'black
              python-format-on-save t
-             python-test-runner 'pytest)
+             python-test-runner 'pytest
+             smartparens-mode t)
      )
 
 
@@ -564,6 +567,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  ;; Interface and backupfiles
   (add-to-list 'default-frame-alist '(fullscreen . maximized)) ; maximises the frame but doesn't go to fullscreen
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (setq inhibit-splash-screen t)          ;show welcome screen
@@ -571,6 +576,7 @@ before packages are loaded."
   (display-time-mode 1)
   (savehist-mode 1)                       ; saving history of pointer
 
+  ;; DiredMode enhancements
   ;; https://www.emacswiki.org/emacs/DiredOmitMode C-x M-o is the keybinding
   (add-hook 'dired-load-hook '(lambda () (require 'dired-x))) ; Load Dired X when Dired is loaded.
   (setq dired-omit-mode t) ; Turn on Omit mode.
@@ -580,7 +586,7 @@ before packages are loaded."
   (setq dired-omit-files (concat dired-omit-files "\\|^__pycache__$\\|,"))
   ;; copy to other window
   (setq dired-dwim-target t)
-  (define-key global-map "\C-x\C-j" 'dired-jump) ;define the dired shortcut key for directory up
+  ;; (define-key global-map "\C-x\C-j" 'dired-jump) ;define the dired shortcut key for directory up
 
   (defun mydired-sort ()
     "Sort dired listings with directories first."
@@ -595,9 +601,17 @@ before packages are loaded."
     "Sort dired listings with directories first before adding marks."
     (mydired-sort))
 
+
   ;; (define-key org-mode-map (kbd "\<\s\TAB")  '(lambda () (interactive) (org-insert-structure-template "src")))
-  (define-key global-map "\C-x\g" 'magit-status) ;define the dired shortcut key for directory up
+  ;; (define-key global-map "\C-x\g" 'magit-status) ;define the dired shortcut key for directory up
+
+  ;; fragtog hook for additional package fragtog
   (add-hook 'org-mode-hook 'org-fragtog-mode)
+  
+  ;; keybinding changes
+  (global-set-key (kbd "C-<tab>") 'hippie-expand) ;not using M-/
+  (define-key global-map "\C-x\g" 'magit-status) ;define the dired shortcut key for directory up
+  (define-key global-map "\C-x\C-j" 'dired-jump) ;define the dired shortcut key for directory up
 )
 
 
