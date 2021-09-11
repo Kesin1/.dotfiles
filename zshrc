@@ -146,3 +146,5 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 set -o ignoreeof
 export PATH="$HOME/.poetry/bin:$PATH"
+
+set -o vi
