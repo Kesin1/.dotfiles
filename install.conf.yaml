@@ -6,13 +6,12 @@
     ~/.p10k.zsh: p10k.zsh
     ~/.config/iterm2/kayfreyerProfile.json: iterm2/kayfreyerProfile.json
     ~/.iterm2_shell_integration.zsh: iterm2_shell_integration.zsh
-    ~/.docker/config.json: docker/config.json
     ~/.docker/daemon.json: docker/daemon.json
     ~/.emacs.d/init.el: emacs.d/init.el
     ~/.emacs.d/settings.org: emacs.d/settings.org
-    ~/.pyenv/versions/3.9.4/requirements.txt: pyenv/versions/3.9.4/requirements.txt
     ~/.subversion/config: subversion/config
     ~/.spacemacs: spacemacs
     ~/.zshenv: zshenv
     ~/.zshrc.pre-oh-my-zsh: zshrc.pre-oh-my-zsh
     ~/.zsh_history_setup.org: zsh_history_setup.org
+    ~/.vim/vimrc: vim/vimrc
