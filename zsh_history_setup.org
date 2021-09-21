@@ -515,4 +515,10 @@
                                      (shell-quote-argument (file-name-nondirectory buffer-file-name)))))
     #+end_src
   
+
   
+* Configuration Html layer
+** For SCSS linting
+     gem install specific_install
+     gem specific_install https://github.com/brigade/scss-lint.git
+     gem specific_install https://github.com/Sweetchuck/scss_lint_reporter_checkstyle.git
