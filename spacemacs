@@ -648,6 +648,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(alert-default-style 'osx-notifier)
+ '(alert-fade-time 10)
  '(evil-want-Y-yank-to-eol nil)
  '(lsp-ui-doc-use-webkit t)
  '(org-agenda-files
