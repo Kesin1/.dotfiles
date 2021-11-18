@@ -93,7 +93,9 @@ This function should only modify configuration layer settings."
              python-formatter 'black
              python-format-on-save t
              python-test-runner 'pytest
-             smartparens-mode t)
+             smartparens-mode t
+             python-sort-imports-on-save t
+             )
      )
 
 
@@ -425,7 +427,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Show the scroll bar while scrolling. The auto hide time can be configured
    ;; by setting this variable to a number. (default t)
-   dotspacemacs-scroll-bar-while-scrolling t
+   dotspacemacs-scroll-bar-while-scrolling nil
 
    ;; Control line numbers activation.
    ;; If set to `t', `relative' or `visual' then line numbers are enabled in all
@@ -561,7 +563,7 @@ It should only modify the values of Spacemacs settings."
 This function defines the environment variables for your Emacs session. By
 default it calls `spacemacs/load-spacemacs-env' which loads the environment
 variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
-See the header of this file for more information."
+ee the header of this file for more information."
   (spacemacs/load-spacemacs-env))
 
 (defun dotspacemacs/user-init ()
@@ -604,8 +606,6 @@ before packages are loaded."
   (setq dired-omit-files (concat dired-omit-files "\\|^__pycache__$\\|,"))
   ;; copy to other window
   (setq dired-dwim-target t)
-  ;; (define-key global-map "\C-x\C-j" 'dired-jump) ;define the dired shortcut key for directory up
-
   (defun mydired-sort ()
     "Sort dired listings with directories first."
     (save-excursion
@@ -613,18 +613,10 @@ before packages are loaded."
         (forward-line 2)                        ; beyond dir. header
         (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
       (set-buffer-modified-p nil)))
-
   (defadvice dired-readin
       (after dired-after-updating-hook first () activate)
     "Sort dired listings with directories first before adding marks."
     (mydired-sort))
-
-
-  ;; (define-key org-mode-map (kbd "\<\s\TAB")  '(lambda () (interactive) (org-insert-structure-template "src")))
-  ;; (define-key global-map "\C-x\g" 'magit-status) ;define the dired shortcut key for directory up
-
-  ;; fragtog hook for additional package fragtog
-  (add-hook 'org-mode-hook 'org-fragtog-mode)
 
 
   ;; keybinding changes
@@ -633,6 +625,14 @@ before packages are loaded."
   (global-set-key (kbd "C-<tab>") 'hippie-expand) ;not using M-/
   (define-key global-map "\C-x\g" 'magit-status) ;define the dired shortcut key for directory up
   (define-key global-map "\C-x\C-j" 'dired-jump) ;define the dired shortcut key for directory up
+
+  ;; fragtog hook for additional package fragtog
+  (add-hook 'org-mode-hook 'org-fragtog-mode)
+
+  ;; another shortcut for other window in other direction
+  (global-set-key (kbd "C-x O") (lambda ()
+                                  (interactive)
+                                  (other-window -1)))
 )
 
 
@@ -650,18 +650,78 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(alert-default-style 'osx-notifier)
  '(alert-fade-time 10)
+ '(delete-by-moving-to-trash t)
  '(evil-want-Y-yank-to-eol nil)
  '(lsp-ui-doc-use-webkit t)
+ '(org-agenda-custom-commands
+   '(("d" "Dashboard"
+      ((agenda ""
+               ((org-deadline-warning-days 7)))
+       (todo "NEXT"
+             ((org-agenda-overriding-header "Next Tasks")))
+       (tags-todo "agenda/ACTIVE"
+                  ((org-agenda-overriding-header "Active Projects"))))
+      nil)
+     ("n" "Next Tasks"
+      ((todo "NEXT"
+             ((org-agenda-overriding-header "Next Tasks"))))
+      nil)
+     ("W" "Work Tasks" tags-todo "+work-email" nil)
+     ("e" tags-todo "+TODO=\"NEXT\"+Effort<15&+Effort>0"
+      ((org-agenda-overriding-header "Low Effort Tasks")
+       (org-agenda-max-todos 20)
+       (org-agenda-files org-agenda-files)))
+     ("w" "Workflow Status"
+      ((todo "WAIT"
+             ((org-agenda-overriding-header "Waiting on External")
+              (org-agenda-files org-agenda-files)))
+       (todo "REVIEW"
+             ((org-agenda-overriding-header "In Review")
+              (org-agenda-files org-agenda-files)))
+       (todo "PLAN"
+             ((org-agenda-overriding-header "In Planning")
+              (org-agenda-todo-list-sublevels nil)
+              (org-agenda-files org-agenda-files)))
+       (todo "BACKLOG"
+             ((org-agenda-overriding-header "Project Backlog")
+              (org-agenda-todo-list-sublevels nil)
+              (org-agenda-files org-agenda-files)))
+       (todo "READY"
+             ((org-agenda-overriding-header "Ready for Work")
+              (org-agenda-files org-agenda-files)))
+       (todo "ACTIVE"
+             ((org-agenda-overriding-header "Active Projects")
+              (org-agenda-files org-agenda-files)))
+       (todo "COMPLETED"
+             ((org-agenda-overriding-header "Completed Projects")
+              (org-agenda-files org-agenda-files)))
+       (todo "CANC"
+             ((org-agenda-overriding-header "Cancelled Projects")
+              (org-agenda-files org-agenda-files))))
+      nil)))
  '(org-agenda-files
-   '("~/Documents/repos/research/tasks_research.org" "~/Documents/repos/related-questions-recommendation/Tasks_related_questions.org"))
+   '("~/Documents/repos/Tasks_related_questions.org" "~/Documents/repos/research/tasks_research.org"))
  '(org-agenda-log-mode-items '(closed clock))
  '(org-agenda-start-with-log-mode t)
  '(org-log-done 'note)
  '(org-log-into-drawer t)
+ '(org-tag-alist
+   '((:startgroup)
+     (:endgroup)
+     ("@errand" . 69)
+     ("@home" . 72)
+     ("@work" . 87)
+     ("agenda" . 97)
+     ("planning" . 112)
+     ("publish" . 80)
+     ("batch" . 98)
+     ("note" . 110)
+     ("idea" . 105)))
  '(org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")))
  '(package-selected-packages
    '(csv-mode company-quickhelp yatemplate yasnippet-snippets yapfify yaml-mode ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package unfill undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired toml-mode toc-org tagedit symon symbol-overlay string-inflection string-edit sql-indent sphinx-doc spaceline-all-the-icons smeargle slim-mode scss-mode sass-mode ron-mode restart-emacs rainbow-delimiters racer quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements pcre2el password-generator paradox overseer orgit-forge org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-fragtog org-download org-cliplink org-brain open-junk-file npm-mode nose nodejs-repl nameless mwim mvn multi-line mmm-mode maven-test-mode markdown-toc magit-section macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-latex lsp-java lorem-ipsum livid-mode live-py-mode link-hint kaolin-themes json-navigator js2-refactor js-doc indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-ls-git helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag groovy-mode groovy-imports google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ gh-md fuzzy font-lock+ flycheck-rust flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr emmet-mode elisp-slime-nav ein editorconfig dumb-jump drag-stuff dotenv-mode doom-themes dockerfile-mode docker dired-quick-sort diminish devdocs define-word dactyl-mode cython-mode company-web company-reftex company-math company-auctex company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode centaur-tabs cargo browse-at-remote blacken auto-yasnippet auto-highlight-symbol auto-compile auctex-latexmk aggressive-indent ace-link ace-jump-helm-line ac-ispell))
- '(python-shell-interpreter "ipython"))
+ '(python-shell-interpreter "ipython")
+ '(window-min-height 12))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -669,4 +729,3 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
-
