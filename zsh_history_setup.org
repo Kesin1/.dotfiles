@@ -514,8 +514,7 @@
                                      ;; (spacemacs/pyenv-executable-find python-shell-interpreter)
                                      (shell-quote-argument (file-name-nondirectory buffer-file-name)))))
     #+end_src
-  
-
+    
   
 * Configuration Html layer
 ** For SCSS linting
