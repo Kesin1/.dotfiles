@@ -145,7 +145,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 set -o ignoreeof
 export PATH="$HOME/.poetry/bin:$PATH"
 
-set -o vi
+# set -o vi
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/p10k.zsh.
 [[ ! -f ~/.dotfiles/p10k.zsh ]] || source ~/.dotfiles/p10k.zsh
