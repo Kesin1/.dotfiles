@@ -125,8 +125,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-
-# eval "$(pyenv init --path)"
+eval "$(pyenv init --path)"
 # eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
